@@ -1,4 +1,4 @@
-package modulo01_basico.capitulo01;
+package modulo01_basico.unidade1;
 
 public class ArtimeticaBasica {
     public static void main(String[] args){
