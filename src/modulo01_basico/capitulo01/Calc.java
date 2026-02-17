@@ -18,7 +18,6 @@ public class Calc {
                  System.out.print("Digite o segundo número: ");
                  double n2 = leitor.nextDouble();
                  System.out.println("Resultado da Soma: " + (n1 + n2));
-                 trocaDeModos();
                  break;
 
              case 2:
@@ -27,19 +26,16 @@ public class Calc {
                  System.out.print("Digite o segundo número: ");
                  double sub2 = leitor.nextDouble();
                  System.out.println("Resultado da Subtração: " + (sub1 - sub2));
-                 trocaDeModos();
                  break;
-
-
-             //default é o "senao" do switch
 
              default:
                  System.out.println("Opção inválida! Tente novamente.");
-                 trocaDeModos();
          }
-     }
-         }
+         opcao = trocaDeModos();
 
+     }
+     leitor.close();
+         }
 
     public static int trocaDeModos() {
         System.out.println(" ESCOLHA ");
