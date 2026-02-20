@@ -6,7 +6,7 @@ public class TesteVeiculo {
         Veiculo meuCarro = new Carro("Toyota");
         Veiculo minhaBike = new Bicicleta("Caloi");
 
-        
+
         meuCarro.mover();
         minhaBike.mover();
     }
