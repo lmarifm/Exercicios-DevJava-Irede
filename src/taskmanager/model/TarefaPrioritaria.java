@@ -16,7 +16,7 @@ public class TarefaPrioritaria extends Tarefa{
         System.out.println("Nível: " + nivel);
     }
 
-    public Prioridade getNivel() {
+    public Prioridade getPrioridade() {
         return nivel;
     }
 
