@@ -5,7 +5,7 @@ public class Teste {
 
         Veiculo meuCarro = new Carro("Civic", 2024);
         Veiculo minhaBike = new Bicicleta("Mountain Bike", 2023);
-        
+
         meuCarro.mover();
         minhaBike.mover();
     }
