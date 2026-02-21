@@ -25,7 +25,7 @@ public class Principal {
             System.out.print("Escolha uma opção: ");
 
             opcao = leitor.nextInt();
-            leitor.nextLine(); // limpa o buffer do teclado
+            leitor.nextLine();
 
             DateTimeFormatter fmt = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
@@ -99,6 +99,7 @@ public class Principal {
 
                 case 0:
                     System.out.println("Saindo do sistema...");
+                    leitor.close();
                     break;
 
                 default:
