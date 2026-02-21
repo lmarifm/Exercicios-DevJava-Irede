@@ -2,7 +2,7 @@ package taskmanager.model;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
-public class Tarefa implements ITarefa{
+public abstract class Tarefa implements ITarefa{
 
     private String titulo;
     private String descricao;

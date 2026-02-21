@@ -17,21 +17,22 @@ public class TaskManager {
 
     public void adicionarTarefa(Tarefa x){
         tarefas.add(x);
-        System.out.println(" A tarefa "+ x + "foi adicionada");
+        System.out.println(" \n A tarefa "+ x.getTitulo().toUpperCase() + " foi adicionada");
     }
 
     public void listarTarefas(){
         if (tarefas.isEmpty()) {
-            System.out.println("A lista de tarefas está vazia.");
+            System.out.println("\n A lista de tarefas está vazia.");
             return;
         }
 
-        System.out.println(" ==== SUAS TAREFAS ====");
+        System.out.println("\n ==== SUAS TAREFAS ====");
         for(int i = 0 ; i < tarefas.size() ; i++){
 
-            String titulo = tarefas.get(i).getTitulo();
+            Tarefa t = tarefas.get(i);
 
-            System.out.println((i + 1) + ". " + titulo);
+            System.out.println((i + 1) + ". ");
+            t.detalharTarefa();
         }
         System.out.println("========================");
 
@@ -39,7 +40,7 @@ public class TaskManager {
 
     public void listarPorPrioridade(Prioridade prioridadeDesejada){
         boolean encontrou = false;
-        System.out.println(" ==== TAREFAS " + prioridadeDesejada + " ====");
+        System.out.println("\n ==== TAREFAS " + prioridadeDesejada + " PRIORIDADE ====");
 
         for (int i = 0; i < tarefas.size(); i++) {
             Tarefa t = tarefas.get(i);
@@ -51,14 +52,15 @@ public class TaskManager {
                 TarefaPrioritaria tp = (TarefaPrioritaria) t;
 
                 if (tp.getPrioridade() == prioridadeDesejada) {
-                    System.out.println((i + 1) + ". " + tp.getTitulo());
+                    System.out.println((i + 1) + ". ");
+                    tp.detalharTarefa();
                     encontrou = true;
                 }
             }
         }
 
         if (!encontrou) {
-            System.out.println("Nenhuma tarefa com prioridade " + prioridadeDesejada + " encontrada.");
+            System.out.println("\n Nenhuma tarefa com prioridade " + prioridadeDesejada + " encontrada.");
         }
         System.out.println("============================");
 
@@ -71,9 +73,9 @@ public class TaskManager {
         if (indice >= 0 && indice < tarefas.size()) {
             Tarefa t = tarefas.get(indice);
             t.setConcluida(true);
-            System.out.println("A tarefa '" + t.getTitulo() + "' foi concluída!");
+            System.out.println("\n A tarefa " + t.getTitulo().toUpperCase() + " foi concluída!");
         } else {
-            System.out.println("Número inválido!");
+            System.out.println("\n Número inválido!");
         }
 
     }
@@ -83,10 +85,10 @@ public class TaskManager {
 
         if(indice >= 0 && indice < tarefas.size()){
             Tarefa t = tarefas.get(indice);
-            System.out.println("A tarefa " + t.getTitulo() + " foi removida");
+            System.out.println("\n A tarefa " + t.getTitulo() + " foi removida");
             tarefas.remove(indice);
         } else {
-            System.out.println("Número inválido!");
+            System.out.println("\n Número inválido!");
         }
     }
 
